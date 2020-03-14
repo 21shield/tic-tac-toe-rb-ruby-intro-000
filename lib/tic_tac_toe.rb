@@ -9,6 +9,11 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
+<<<<<<< HEAD
+=======
+board = ["","","","","","","","",""]
+
+>>>>>>> 66680c16857a5bd7fe9a7167cf11c374cd0aef81
 def display_board(board)
   row1 = " #{board[0]} | #{board[1]} | #{board[2]} "
   sep = "-----------"
@@ -55,7 +60,11 @@ def turn(board)
   input = gets.strip
   idx = input_to_index(input)
   if valid_move?(board,idx) == true
+<<<<<<< HEAD
    move(board,idx,current_player(board))
+=======
+   move(board,idx,character='X')
+>>>>>>> 66680c16857a5bd7fe9a7167cf11c374cd0aef81
    display_board(board)
   else
     turn(board)
@@ -120,6 +129,7 @@ def winner(board)
 end
 
 def play(board)
+<<<<<<< HEAD
   puts "Welcome to Tic Tac Toe!"
   display_board(board)
  until over?(board) == true do
@@ -131,4 +141,10 @@ def play(board)
  elsif draw?(board) == true
    puts "Cat's Game!"
  end
+=======
+ turn(board)
+ if over?(board) == false
+   turn(board)
+ end
+>>>>>>> 66680c16857a5bd7fe9a7167cf11c374cd0aef81
 end
